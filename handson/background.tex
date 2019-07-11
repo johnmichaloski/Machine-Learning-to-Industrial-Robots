@@ -1,0 +1,20 @@
+\subsection{Entropy}
+Shannon introduced the concept of entropy as means to calculate the minimum encoding size of message communication, defined as the smallest possible average size of loss-less encoding of messages sent from the source to destination~\cite{Shibuya}.
+\begin{equation}
+    Entropy = -\sum_{i} P(i) log_2 P(i) 
+\end{equation}
+where $P(i)$ is the probability of the i-th message type.
+
+Cross-entry uses a sample population distribution $Q(x)$  to estimate the entropy true probability distribution  $P(x)$. Below are definition for entropy and cross-entropy using the true probability distribution is $P(x)$ and the sample population distribution is $Q(x)$. If the cross-entropy sample population distribution is perfect then $P(x) = Q(x)$.
+\begin{equation}
+    Entry = \mathbb{E}_{x\sim P}[-log P(x)] 
+\end{equation}
+\begin{equation}
+    CrossEntry = \mathbb{E}_{x\sim P}[-log Q(x)] 
+\end{equation}
+Cross-entropy compares the ML model prediction with the true probability distribution. As such, cross-entropy is often used as a loss function to train an AI/ML classification model.
+
+
+Whatever the learning algorithm, a key scientific and practical goal is to theoretically characterize the capabilities of specific learning algorithms and the inherent difficulty of any given learning problem: How accurately can the algorithm learn from a particular type and volume of training data? How robust is the algorithm to errors in its modeling assumptions or to errors in the training data? Given a learning problem with a given volume of training data, is it possible to design a successful algorithm or is this learning problem fundamentally intractable?
+
+ 

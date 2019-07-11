@@ -1,0 +1,108 @@
+
+\subsection{Machine Learning Technology Case Study}
+% Keras documentation: https://keras.io/scikit-learn-api/
+Fran{\c{c}}ois Chollet developed Keras~\cite{chollet2018keras} to simplify the creation of deep learning models. Keras is a good starting point to understand AI/ML technology as Keras points out, it is an API designed for human beings, not machines. Keras reduces ML programming complexity while providing a powerful porgramming tool~\cite{KerasBenefits}. 
+
+Keras is an open source neural network library written in Python capable of running on top of several prominent neural net technologies: TensorFlow~\cite{abadi2016tensorflow}, Microsoft Cognitive Toolkit~\cite{CNTK}, or Theano~\cite{Theano}. Keras provides a straightforward deep neural network programming framework that is evolving into  a  a ``push-button'' automated machine learning where the daunting combinatorics of selecting parameters and configuration are deduced from experimental evaluation~\cite{jin2018efficient}.
+
+For the present, the basic steps in developing a Keras deep machine learning application are:
+
+\begin{enumerate}
+\item Define the data with various tools to assist in creating, managing and filtering the data.
+\item Define a neural network model - either sequential or Functional API
+\item Configure and compile the learning process
+\item Train (fit) the model
+\item Save the model for reuse
+\item Load the model either
+\item Predict with the model
+
+\end{enumerate}
+
+\begin{description}
+\item{ \textbf{Define the data}}\\
+Keras preprocessing is the data preparation and data augmentation module of the Keras deep learning library. It provides utilities for working with image data, text data, and sequence data.
+
+\textul{Sequence Processing}
+\begin{description}
+
+\item{\textbf{TimeseriesGenerator}} - Utility class for generating batches of temporal data.
+\item{\textbf{pad\_sequences}} - Pads sequences to the same length.
+\item{\textbf{skipgrams}} This function transforms a sequence of word indexes (list of integers) into tuples of words~\cite{mikolov2013efficient}.
+\item{\textbf{make\_sampling\_table}} - Generates a word rank-based probabilistic sampling table.  Used for generating the sampling\_table argument for skipgrams. sampling\_table[i] is the probability of sampling the word i-th most common word in a dataset (more common words should be sampled less frequently, for balance).
+
+\end{description}
+
+\item {\textbf{Configure and compile the learning process}}\\
+Before training a model, you need to configure the learning process, which is done via the compile method. It receives three arguments:
+
+\begin{itemize}
+\item An optimizer. This could be the string identifier of an existing optimizer (such as rmsprop or adagrad), or an instance of the Optimizer class. See: optimizers.
+\item Loss function. This is the objective that the model will try to minimize. It can be the string identifier of an existing loss function (such as categorical\_crossentropy or mse), or it can be an objective function. 
+\item List of metrics. For any classification problem you will want to set this to metrics=['accuracy']. A metric could be the string identifier of an existing metric or a custom metric function.
+\end{itemize}
+
+\end{description}
+% from https://keras.io/getting-started/sequential-model-guide/#compilation 
+\subsection{Specifying the input shape}
+The model needs to know what input shape it should expect. For this reason, the first layer in a Sequential model (and only the first, because following layers can do automatic shape inference) needs to receive information about its input shape. There are several possible ways to do this:
+
+Pass an input\_shape argument to the first layer. This is a shape tuple (a tuple of integers or None entries, where None indicates that any positive integer may be expected). In input\_shape, the batch dimension is not included.
+Some 2D layers, such as Dense, support the specification of their input shape via the argument input\_dim, and some 3D temporal layers support the arguments input\_dim and input\_length.
+If you ever need to specify a fixed batch size for your inputs (this is useful for stateful recurrent networks), you can pass a batch\_size argument to a layer. If you pass both batch\_size=32 and input\_shape=(6, 8) to a layer, it will then expect every batch of inputs to have the batch shape (32, 6, 8).
+
+\subsectin{Compilation}
+Before training a model, you need to configure the learning process, which is done via the Keras compile method. You configure a Keras model for training using the following command:
+\begin{minted}{python}
+compile(object, optimizer, loss, metrics = NULL, loss_weights = NULL,
+  sample_weight_mode = NULL, weighted_metrics = NULL,
+  target_tensors = NULL, ...)
+\end{minted}
+Figure~\ref{fg:keras_compilation} shows the Keras compilation argument tree. 
+
+\begin{figure}[!h]
+\centering
+%\framebox{
+\includegraphics*[]{./Figure/KerasCompileModel.jpg}
+%}
+\caption{Keras Configuration using Compile Command}
+\label{fg:keras_compilation} 
+\end{figure}
+
+It receives three arguments:
+\begin{description}
+
+
+\item{\textbf{ optimizer}} This could be the string identifier of an existing optimizer (such as rmsprop or adagrad), or an instance of the Optimizer class. See: optimizers.
+\item{\textbf{Loss function}} This is the objective that the model will try to minimize. It can be the string identifier of an existing loss function (such as categorical_crossentropy or mse), or it can be an objective function. See: losses.
+\item{\textbf{list of metrics}} For any classification problem you will want to set this to metrics=['accuracy']. A metric could be the string identifier of an existing metric or a custom metric function.
+\end{description}
+
+\subsectin{Training}
+Keras models are trained on Numpy arrays of input data and labels. For training a model, you will typically use the fit function. 
+
+
+
+
+
+\subsectin{Initialization}
+
+What is the purpose of setting an initial weight on deep learning model?
+
+This is greatly addressed in the Stanford CS class CS231n:
+
+Pitfall: all zero initialization. Lets start with what we should not do. Note that we do not know what the final value of every weight should be in the trained network, but with proper data normalization it is reasonable to assume that approximately half of the weights will be positive and half of them will be negative. A reasonable-sounding idea then might be to set all the initial weights to zero, which we expect to be the “best guess” in expectation. This turns out to be a mistake, because if every neuron in the network computes the same output, then they will also all compute the same gradients during backpropagation and undergo the exact same parameter updates. In other words, there is no source of asymmetry between neurons if their weights are initialized to be the same.
+
+There are several weight initialization strategies; each one is best suited for a type of activation function. For instance, Glorot's initialization aims at not saturating sigmoid activations, while He's initialization is meant for Rectified Linear Units (ReLUs).
+
+Loss Functions
+
+\begin{tabular}{ l l l }
+Loss Function &	ML Application &	Description \\
+Cross-Entropy&	Classification,
+Binary classification &	Cross-entropy loss, or log loss, measures the performance of a classification model whose output is a probability value between 0 and 1.\\
+Hinge &	classification	& &\\
+Huber &	regression		& &\\
+Kullback-Leibler (KL)	& &	The KL divergence tells us how well the probability distribution Q approximates the probability distribution P by calculating the cross-entropy minus the entropy. \\
+MAE (L1) &&\\		
+MSE (L2)	&&\\		
+\end{tabular}

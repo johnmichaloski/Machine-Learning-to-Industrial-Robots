@@ -1,0 +1,180 @@
+\newpage
+\section{Open Data Publishing}
+\label{chapter3}
+A new and ongoing development in robotics and automation is the goal to achieve reproducible and measurable robotic research. The IEEE has even established a Technical Committee on Performance Evaluation and Bench marking of Robotics and Autonomous System that has elements for defining reproducible papers. The reproducibility of experimental results is a key characteristic of the scientific method.  An ongoing concern within the robotics research community is the difficulty of reproducing results which slows down the industrial take-up of new solutions. Basic research is also hindered, since it is very difficult for a research group to build on the results of another one, leading to a very limited cross-exploitation of results between different groups, and a general prevalence of exploration over exploitation.
+
+Overall, the replications of robotics and artificial intelligence (AI) experiments has been limited~\cite{bonsignorio2017new}. This fact hampers both research progress and results utilization~\cite{bonsignorio2014fostering, guglielmelli2015research} when the goal is to regard (intelligent) robotics as a science.
+
+\subsection{Open Data Publishing Resources}
+
+Global open data publishing resources are fostering a new era of global sharing and collaboration of research. By leveraging connections between local infrastructures and global information resources,  data sources that were previously either unavailable or prohibitively labor-intensive are now publicly available. To assist this cause, technologies described subsequently are part of the transition to an automated collaboration research environment. 
+
+Some of the more noteworthy resources to enable public sharing and collaboration of research are highlighted. Tool identifiers as ORCID or DOI are being embedded in research workflows either data or written word. A tool such as Code Ocean provides a publicly accessible data storage facility to share algorithms. FAIR provides an software tool to assess the openness of a collaborative resource. 
+
+
+\subsubsection{DOI}
+In computing, a Digital Object Identifier or DOI is a persistent identifier used to identify objects uniquely, standardized by the International Organization for Standardization (ISO)~\cite{ISO26324}.  DOIs are in wide use mainly to identify academic, professional, and government information, such as journal articles, research reports and data sets, and official publications though they also have been used to identify other types of information resources, such as commercial videos.
+
+\subsubsection{ORCID}
+ORCID provides a persistent digital identifier that distinguishes the author from other researchers and, through integration in key research workflows such as manuscript and grant submission~\cite{ocrcid}. ORCID is a non-profit organization supported by a global community of organizational members, including research organizations, publishers, funders, professional associations, and other stakeholders in the research ecosystem. ORCID is part of the wider digital infrastructure needed for researchers to share information on a global scale. ORCID enables transparent and trustworthy connections between researchers, their contributions, and affiliations by providing an identifier for individuals to use with their name as they engage in research, scholarship, and innovation activities. ORCID is useful for determining a publication impact factor as a means to measure the influence of research journals and researchers, which are based on number of citations of a given publication.
+ 
+The web site ~\cite{YateendraJoshi} explains the difference between DOI and ORCID. A researcher can be uniquely identified by her or his unique ORCID, while each publication can be uniquely identified by its DOI.
+
+\subsubsection{Code Ocean}
+Today's research often includes software code, statistical analysis and algorithms that are not included in traditional publishing. But they are often essential to reproducing the research results and reusing them in a new product or research. This creates a major roadblock for researchers that lead to the development of Code Ocean.  Code Ocean is a research collaboration platform that provides researchers and developers a way to create, share, and run code for private projects that are published in academic publishing venues~\cite{codeocean}. Now, researchers can upload code and data in any open source programming language and link the working code in a computational environment with the associated article for free. A Digital Object Identifier (DOI) is associated with the algorithm and data, providing correct attribution and a connection to the published research. Thus, anyone can run an algorithm posted to Code Ocean, verify it, modify it, and test the modifications.
+
+The Institute of Electrical and Electronics Engineers (IEEE) has established a link between research papers and research code with the ability to publish code. Any author that has had an IEEE journal article published  can upload associated algorithms to Code Ocean by visiting https://codeocean.com/ieee/signup~\cite{IEEE7920486}. Once the algorithm is uploaded to Code Ocean, it will be automatically linked to the associated article in IEEE.
+\subsection{PapersWithCode}
+The mission of Papers With Code is to create a free and open Web-based resource for Machine Learning papers, code and evaluation tables~\cite{paperswithcode}.  Papers With Code has a broad coverage of Machine Learning research with more than 60,000 papers. In addition, Papers With Code has also manually annotated tasks and datasets in 1,600 ArXiv abstracts.
+
+Papers With Code uses software automation to catalogue the machine learning papers and related code and data  information~\cite{paperswithcodegit}, and is working on automating the extraction of evaluation metrics from papers. Papers With Code web links include 1)~papers with abstracts, 2)~links between papers and code, and 3)~evaluation tables.
+
+ 
+ \subsubsection{FAIR}
+Findable, Accessible, Interoperable and Reusable (FAIR)  is a self-assessment tool that is available through the NIST Library and can be found at~\cite{FAIR}. FAIR was developed by the Australian Research Data Commons (ARDC)  and it is a self-assessment tool that can assess the 'FAIRness' of a dataset and determine how to enhance its FAIRness (where applicable). It is a self-assessment tool that is available through the NIST Library. FAIR has been designed predominantly for data librarians and IT staff, but could be used by software engineers developing FAIR Data tools and services, and researchers provided they have assistance from research support staff.
+
+FAIR asks questions related to the principles underpinning Findable, Accessible, Interoperable and Reusable. Once you have answered all the questions in each section you will be given a 'green bar' indicator based on your answers in that section, and when all sections are completed, an overall 'FAIRness' indicator is provided.
+
+\subsection{NIST}
+NIST provides an information technology (IT) solution to enable the shared storage, exchange, and dissemination of NIST research data worldwide.  Figure~\ref{fg:oar_arch} shows the  Open Access to Research (OAR)  to handle data and paper publishing at NIST.  Data publishing at NIST has evolved into formal procedure that includes preparing your data for publication, using MIDAS, and enhancing your data publication so that it can be more easily used and cited.  
+
+\begin{figure}[!h]
+\centering
+%\framebox{
+\includegraphics*[width=0.9\columnwidth]{./Figure/Publishing_AI_Elements.jpg}
+%}
+\caption{OAR Elements in Publishing and Data Dissemination at NIST}
+\label{fg:oar_arch} 
+\end{figure}
+
+The value of efficient internet-based data sharing tools in science and engineering is clear from their
+widespread adoption by mainstream researchers. In fact, 
+
+In addition, no collaborative tools exist today that support a wide collaboration or community interaction on existing data products - what are they?
+
+Where possible this solution will adapt existing IT products, services, and data sharing platforms, but it
+will be developed specifically to meet the needs and satisfy the constraints and security considerations of
+research in a federal agency such as NIST.
+
+
+
+
+
+
+% http://odiwiki.nist.gov/ODI/LevineHounsfield
+
+\subsubsection{ERB}
+In order to publish a paper at NIST, a manuscript must be approved by the  Editorial Review System as part of the publishing process. ERB is known as Washtingon ERB (WERB) for NIST Gaithersburg publications, or BERB for NIST Boulder publications. The purpose of editorial review and approval at NIST is to ensure that an effective quality management system is in place and functioning during the process that ends with a technical manuscript. Minimally, most routine errors in typing, spelling, grammar, organization, format, technical expression, and policy should have been detected and corrected in technical manuscripts before submission for Editorial Review Board review. All technical manuscripts are required to submit a Form NIST-114, ``Manuscript Review and Approval''. This includes having a several reviewers to  insure manuscripts are reviewed for compliance with NIST technical requirements, policy, and editorial quality. When necessary, manuscripts are also reviewed for compliance with legal requirements. Review requirements include:
+
+\begin{enumerate}
+    \item 
+ Technical Review: Critical evaluation of the technical content and methodology, statistical treatment of data, uncertainty analysis, use of appropriate reference data and units, and bibliographic references;
+    \item 
+Policy Review: Examination for consistency with NIST statutory authority and operating policies, appropriateness of selected medium for publication, appropriate recognition of sponsors, institutions and persons, and other relevant matters;
+    \item 
+Editorial Review: Examination for correct use of language, freedom from jargon, clarity of expression, effective organization, good format, appropriate title, adequate references, indexing, citations, footnotes, and figures; writing quality, spelling, conformance with Appendix D (required use of SI units), typography, and correct data on Form NIST-114, Manuscript Review and Approval; and
+    \item 
+ Legal Review: Examination by the NIST Counsel when required as determined by the supervisor, the OU Director, or the Editorial Review Board.
+\end{enumerate}
+
+
+
+There is a Web based document management system called the NIST Integrated Knowledge EditorialNet (NIKE) that is tasked with managing the publication approval process.
+
+\subsubsection{Computer Software}
+
+Computer software too has a WERB vetting process to insure quality.   
+From the NIST Administrative Manual Section 4.09 Appendix I, regarding ``Editorial Review of Computer Software Documentation'', it states that the publication of  computer software has become an essential means for disseminating the results of an increasing number of NIST technical programs. The need for editorial review as a vital part of quality management for information on machine-readable media has long been recognized. This need was the focus of a special study by an ad hoc Committee on Software Documentation that reported to WERB on September 30, 1983, and recommended:    
+
+``Computer programs can only be sent to NTIS when program documentation exists and when the program documentation has been cleared by WERB.''
+
+
+
+
+
+\subsubsection{MIDAS}
+The  Management of Institutional Data Assets System (MIDAS)  is a suite of web-based software tools to manage the NIST data publication process containing  two components: a Data Management Plan (DMP) tool and an Enterprise Data Inventory (EDI) tool. 
+
+NIST's Public Access Policy requires the creation of a DMP for all NIST research data to enhance the integrity and visibility of NIST measurements, standards, and research activities. DMPs enable NIST scientists and researchers to document their plans for storage, archival, and accessibility for NIST’s numerous types of information. DMPs are living documents that can be modified as plans and work are updated.
+
+NIST has developed EDI, a catalog system that provides NIST scientists with a means of entering metadata about their datasets, along with an export capability that facilitates the feeding of that metadata into the Federal government’s online data catalog, data.gov, as well as NIST’s online data catalog, data.nist.gov, where the data can then be discovered by the public.
+\begin{figure}[!h]
+\centering
+\framebox{
+\includegraphics*[width=0.9\columnwidth]{./Figure/MIDASDataFlow.PNG}
+}
+\caption{MIDAS Open Data Process at NIST -- Source~\cite{MIDASHELP}}
+\label{fg:midas_arch} 
+\end{figure}
+
+Figure~\ref{fg:midas_arch}  shows the process of a MIDAS application. MIDAS contains a wizard that guides users through creation of a Data Management Plan. MDIAS allows users to upload datasets to a  storage location for public access, e.g., by data.gov or data.nist.gov.  At this point, MIDAS establishes an automatic digital object identifier (DOI) for use in publishing the dataset, which goes public after  final approval.  MIDAS includes as a web accessible interface that creates a record for datasets listed in NIST’s EDI.  A review process is required by MIDAS for publishing data.  
+Finally, MIDAS an export that sends that inventory to www.data.gov to allow for public discovery of NIST’s data assets.
+
+
+
+% https://midas.nist.gov/
+MNIDAS provides for the automated generation of Digital Object Identifier (DOI) for metadata records so  that all records will now be assigned a DataCite DOI, which will increase the visibility of the datasets.  A DOI is available to reference as soon as the record is created and will be minted using your homepage URL when the record is approved for publication.
+
+
+
+
+
+
+
+
+
+\subsubsection{Data.gov}
+ Since NIST is a  Federal government agency under the Department of Commerce, any data can eventually be added to the catalog hosted by Data.gov.  The NIST MIDAS services supports this integration into Data.gov.
+
+Data.gov \url{data.gov} is managed and hosted by the U.S. General Services Administration, Technology Transformation Service. Under the terms of the 2013 Federal Open Data Policy, newly-generated government data is required to be made available in open, machine-readable formats, while continuing to ensure privacy and security. Data.gov is primarily a federal open government data site but state, local, and tribal governments can also syndicate metadata describing their open data resources on Data.gov. 
+
+Data.gov does not host data directly, but rather aggregates metadata about open data resources in one centralized location. Data.gov follows the ``Project Open Data'' schema – a set of required fields (Title, Description, Tags, Last Update, Publisher, Contact Name, etc.) for every data set displayed on Data.gov. Once an open data source meets the necessary format and metadata requirements,  Data.gov  synchronizrd with that source’s metadata on Data.gov.
+
+Preparing a data source for harvesting by the Data.gov catalog differs depending on the type of source:
+\begin{itemize}
+    \item 
+\textbf{ Federal Data with Project Open Data} The most common source is the Public Data Listing as required by the Federal Open Data Policy.
+\item
+\textbf{ Federal Geospatial Data} A number of federal agencies hold geospatial data which has separate requirements under different legal authorities.
+\item
+\textbf{ Non-Federal Data} Non-federal sources are not covered by the Federal Open Data Policy, but can be included in the Data.gov catalog voluntarily. Depending on your platform, creating this harvester might just be the push of a button or it could take a little more work, but the team will walk you through it either way. (See: \url{https://www.data.gov/local/add} )
+\end{itemize}
+Once a data source has been established, it is necessary to coordinate with Data.gov using the following steps:
+\begin{itemize}
+    \item \textbf{ Contact Data.gov}. You first contact Data.gov  (datagov@gsa.gov) and include a link to your metadata in the data.json format.
+
+\item \textbf{Connect to the Data source}  Data.gov will create a new ``Harvest Source'' that will automatically collect information about your datasets and update Data.gov whenever changes are made on your data catalog.
+
+\item \textbf{Testing}  Data.gov then tests to ensure the harvester works properly. If anything seems wrong, the Data.gov will help you configure your data catalog so that Data.gov can properly collect your datasets.
+
+\item \textbf{Online Worldwide} Once the harvester has been tested successfully, Data.gov will start automatically consuming information about your datasets and all the basic details of your datasets will be available on Data.gov with links to the source and your open data policy.
+\end{itemize}
+
+
+
+
+
+\subsubsection{Metadata}
+Metadata is structured information that describes, explains, locates, or otherwise makes it easier to retrieve, use, or manage an information resource~\cite{press2004understanding}.  A dataset is an identifiable collection of structured data objects unified by some criteria (authorship, subject, scope, spatial or temporal extent…). A catalog is a collection of descriptions of datasets; each description is a metadata record. The intention of a data catalog is to facilitate data access by users who are first interested in a particular kind of data, and upon finding a fit-for-purpose dataset, will next want to know how to get the data.
+
+
+Developing robust metadata has several requirements. 
+\begin{enumerate}
+    \item define and name standard metadata fields so that a data consumer has sufficient information to process and understand the described data.
+    \item use a standardized regular format for providing detailed information documenting the structure, processing history, quality, relationships, and other properties of a dataset. 
+    \item if possible, make metadata machine readable which will greatly increase its utility, but requires more detailed standardization
+\end{enumerate} 
+
+
+Establishing a common data vocabulary is the key to effective data communication, such that, defining not only field names, but also how information is encoded in the metadata fields is important.  The metadata schema specified in this NIST Midas system is based on Data catalog vocabulary {(DCAT)}~\cite{maali2014data}, a hierarchical vocabulary specific to datasets. This specification defines three types of metadata elements: Required, Required-if (conditionally required), and Expanded fields. These elements were selected to represent information that is most often looked for on the web. To assist users of other metadata standards, field mappings to equivalent elements in other standards are provided.
+
+Datasets can be stored in various formats, included Commas Separated Value (CSV), proprietary and open-source database schema - either SQL or non-SQL, and various other assorted  systems. Regardless of which data format is employed, it should include a fundamental export option which allows the catalog to be exported as a CSV file, which can then be imported into the CSV Converter for conversation to an appropriately formatted JSON file~\cite{project-open-data}.
+
+Various tools exist to convert CSV into JSON format in order to satisfy the needed data.json file. Project open data supplies a free CSV Converter to JSON~\cite{csvconverter}. Comprehensive Knowledge Archive Network (CKAN)
+ is an open-source tool for generating data.json, to help in fostering the sharing of data between public institutions seeking to share their data with the general public.
+Socrata is a commercial database tool that natively generates data.json in support of data-centered collaboration between governments and the private sector.
+
+DESCRIBE KINEMATIC METADATA
+
+
+

@@ -1,0 +1,159 @@
+\newpage
+\section{Performance Testing and Evaluation}
+\label{chapter 4}
+
+One of the problems  with the application of a Neural Net AI technology as opposed to a sequential programming approach is the trustworthy factor associated with how the result was derived. With sequential programming you can go step by step to establish a chain of accountability. With neural nets, you rely that all answers are reasonable, and it is difficult to  do 100\% testing coverage of a neural net.
+
+%\textit{Person in Charge; Md Sahidul Islam and Wzheng}
+%---- the scope of this chapter}}
+
+
+\subsection{Criteria for Performance Metrics}
+The  goal of assessing AI/ML performance is to  achieve a situation in which users and providers of AI/ML have an accurate assessment of the performance and reliability of the AI/ML that they use/provide. To achieve this, performance and reliability metrics for AI/ML algorithms and implementations must be developed. The general requirements for these metrics include~\cite{paxson1998framework}:
+ 
+\begin{itemize}
+\item   A metric should have the property that it is repeatable: if the methodology is used multiple times under identical conditions, the same sensor readings should result in the same sensor readings. Of note, this may not be possible or desirable of continuous machine learning that adapts to new and different experiences.
+   
+\item The metrics must exhibit no bias for  implementations of identical technology, 
+\item The metrics must be useful to users and providers in understanding the performance they experience or provide,
+
+\end{itemize}
+
+\subsection{sensor readings, Uncertainties, and Errors}
+Ideally a sensor reading is both accurate and precise, with sensor readings all close to and tightly clustered around the true value. The accuracy and precision of a sensor reading process is usually established by repeatedly measuring some traceable reference standard. Traceability to a widely accepted standard permits comparisons of sensor readings among users. Reliability refers to the consistency of accurate results over consecutive sensor readings over time~\cite{typereliability}.
+As background, there are numerous terms used in assessing the performance of systems and sensor reading results. Accuracy, precision, trueness, bias, error, variability, tolerance, traceability, reliability, and uncertainty are each integral to understanding performance metrics.
+
+Performance is characterized by a  sensor reading, which not matter how exact is usually taken as the estimate~\cite{vim2004international}.  This leads to the following definitions:
+\begin{description}
+
+\item \textbf{Trueness} is the closeness of a sensor reading result to the actual (true) value.  \item \textbf{Error} is the difference between a measured value of quantity and its true value. 
+\item \textbf{Variability} is an inherent part of sensor reading systems and sensor readings - no two sensor readings can be expected to be the same.
+\item \textbf{Error} There are two types of sensor reading errors: systematic error and random error. 
+\begin{description}
+\item \textbf{ systematic error} is the error associated with the fact that a sensor reading contains a consistent error. 
+
+\item \textbf{Random error} is caused by inherently unpredictable fluctuations with the sensor reading and when a sensor reading is repeated it will generally provide a measured value that is different from the previous value. 
+\end{description}
+
+\item \textbf{Sensor Reading uncertainty} characterizes the dispersion of sensor reading values to the true value. 
+\begin{description}
+\item \textbf{Accuracy} of a sensor reading  is the degree of closeness of sensor readings of a quantity to the true value. 
+\item \textbf{Precision} is the closeness of agreement among a set of sensor reading results. Precision can also be defined with reference to a sensor reading number of decimal places. Most obvious, representing a sensor reading with a millionth decimal place versus a tenth decimal place provides a more exacting result, but there is no guarantee that extra decimal places add accuracy.  
+\item \textbf{Repeatability}
+is the closeness of the agreement between the results of successive sensor readings of the same measurand carried out under the same conditions of sensor reading~\cite{jcgm2008evaluation}. 
+\end{description}
+
+\end{description}
+
+ 
+ 
+Ideally a sensor reading is both accurate and precise, with sensor readings all close to and tightly clustered around the true value. The accuracy and precision of a sensor reading process is usually established by repeatedly measuring some traceable reference standard. Traceability to a widely accepted standard permits comparisons of sensor readings among users. Reliability refers to the consistency of accurate results over consecutive sensor readings over time~\cite{typereliability}.
+
+
+
+\subsection{Metrics}
+
+In the application of AI/ML to robotics, there are several issues related to the performance and reliability.  The metrics of interest are performance and correctness based, and not for instance, programmer productivity metrics, software management metrics, algorithmic costing metrics, or software design metrics. 
+
+Since the application domain is robotics, in general, real-time performance is required. This means that a response needs a hard time bound or a response can be catastrophic (e.g., collision), or flawed (shaky behavior due to intermittent and non-real-time response times) or deadly (e.g., robot in motion but not under sufficiently robust timed control that could hurt someone). Given proper safeguards.poor response times can be tolerated (e.g., have a graceful degradation if response exceeds threshold)  unless AI/ML response time continually overruns any time constraint.
+
+A bigger concern to robotics application is the correctness of an AI/ML response. AI/ML is a proverbial black box, with a predicted  output from a given input, but there is no guarantee of of a nearness of predicted output response to a close inputs. Further if the internal AI/ML algorith in engaged in continually adaptive learning to new and different experiences, sampled input testing of the AI/ML cannot guarantee correctness as the input/output, stimulus/response, can change over time as the AI/ML algorithm learns. Thus, in traditional programming, there may be bugs in the code but there is a certainty to a response output to a given input. Suc that a well-tested traditional software program should operate as expected, omitting underlying software changes to operating system, libraries or robot hardware and devices. 
+
+ 
+\subsubsection{Software metrics}
+There are nuances to AI/ML software correctness. 
+
+An AI/ML predicted outcome  may correctly identify an object in an image, but the position and orientation of the object may have varying degrees of errors. If the goal is to successfully identify the object, then the AI/ML succeeded. However, if a robot were to grasp an object given and incorrect position and orientation, then the AI/ML failed. 
+
+If we assume AI/ML is continually learning and thus adapting, this could lead to  different results to the same inputs over time. However if these results are consistent (or better) with previous trials, then the AI/ML should be deemed correct.
+
+Given this dichotomy  of behavior, this leads to metrics of software correctness success with side effects that can impact correctness.
+
+\begin{description}
+\item \textbf{Reliability} 
+metric that is the probability that the software will perform its intended function for a specified interval under stated conditions~\cite{reliabilityweb}. Failures occur due to weaknesses in the design, bugs in the code, bad training data, flaws in the algorithm, defects from the manufacturing processes, improper application, etc. This assumes that sensor reading of the operation returns 100\% success rate, which 
+
+\item \textbf{Consistent and unambiguous} 
+A software correctness concern with software quality is the potential for identical outcomes from different inputs. For example, redundant robot manipulators can have several joint solutions to attain an identical robot pose. This violates a 1:1 input to output mapping. (Is this bad?) Thus it is imperative that further input qualifications (such as configuration flags) be assigned to the inputs to differentiate the trained machine learning model.
+
+\item \textbf{Quality}
+Assumptions affecting the software quality are not always valid  Some software quality assumptions will be listed. Software fault are independent. Inputs for testing software performance should be randomly selected  from an input space. We assume the test space is representative of the operational input space. We assume there is a closeness or continuity between near inputs and the resulting outputs. We assume software failure is observable. We further assume faults are corrected without introducing new faults.
+
+
+\end{description}
+
+   
+In order to estimate the AI/ML program reliability and quality we can use test cases sampled from input.  
+
+The test cases could be software test coverage, which measures the degree to which the source code of a program is successfully executed when a particular test suite runs. A program with high test coverage has had more of its source code executed during testing, which suggests it has a lower chance of containing undetected software bugs compared to a program with low test coverage~\cite{hamill2004unit}. 
+
+Test cases based on a design of experiments where the variance of inputs plays a vital role in establishing correctness through analysis of variance.  Design of experiments may be required, since all combinations of inputs may not be possible to test such that some form of partitioning like inputs into equivalence classes is required before running tests on combinations of these grouped inputs. It does assume the outcome of test case for other points close to test points is similar. Taguchi introduced levels of noise into the input test cases to improve experiment analysis fidelity~\cite{387375}.
+
+\subsection{System Trust}
+People who use AI/ML systems want to be able to trust such systems - that is, to know that these systems will perform correctly and to understand the reasoning behind the system's actions. A synthesis of research reveals that AI/ML system trust  fall along a spectrum in terms of assurance ~\cite{Israelsen:2019:XAY:3303862.3267338}. 
+
+AI/ML systems are designed to be trained from large datasets and in some cases are expected to adapt to new never before seen data. However, the correctness of AI/ML systems is in question if such data does not conforms to assumptions made at design time. To handle this issue before AI/ML processing, traditionally programmed data validation in accordance with the design criteria may be required.
+
+
+\subsection{Performance Testing Sequence}
+
+The purpose of this section is to outline the steps necessary to verify and validate that the AI/ML software satisfies all functional Requirements. Figure~\ref{fg:testing_arch}  shows the testing process of an AI/ML application module. Issues associated with  verifying each step are included as validation inputs. In the sections that follow a more thorough discussion on performance testing will be discussed. 
+
+\begin{figure}[!h]
+\centering
+\framebox{
+\includegraphics*[]{./Figure/Testing_Flowchart.jpg}
+}
+\caption{Performance Testing Elements}
+\label{fg:testing_arch} 
+\end{figure}
+
+Inherent to the AI/ML module is a dependence on machine learning frameworks. There are many AI frameworks, in many different programming flavors. Both commercial and open source have a spate of active users of these frameworks. As such, we will assume any issues with underlying AI software would be incumbent on the AI/ML model under test and not on the framework used to generate the machine learning models.  
+
+\subsubsection{Functional testing}
+
+Functional testing is performed when the AI/ML application is complete.  Functional
+testing is the process of running Test Cases to verify
+the application meets the functional objectives. Typically, AI/ML functional testing uses  a part of the dataset as a test set to verify functional correctness. In addition, the interface to the AI/ML module may require various test sequences to verify operation.
+
+Goodness of fit often refers to measures used to estimate how well the approximation of the function matches the target function. For functional testing, there are two goodness of fit problems:  overfitting and underfitting. 
+
+Overfitting refers to an AI/ML model that learns the training data too well. This effect means that noise or random fluctuations in the training data is picked up and learned as concepts by the AI/ML model. The problem is that these concepts do not apply to new data and negatively impact the models ability to generalize.
+
+
+Underfitting refers to a model that can neither model the training data nor generalize to new data. An underfit machine learning model is not a suitable model and will be obvious as it will have poor performance on the training data.  Underfitting is often easy to detect as output results will lead to poor performance. 
+
+\subsubsection{Cross-validation}
+
+The neural network dataset terminology has the following concepts~\cite{batchsizeNN}:
+\begin{itemize}
+\item	one epoch = one forward pass and one backward pass of all the training examples
+\item	batch size = the number of training examples in one forward/backward pass. The higher the batch size, the more memory space you'll need.
+\item	number of iterations = number of passes, each pass using [batch size] number of examples. To be clear, one pass = one forward pass + one backward pass (we do not count the forward pass and backward pass as two different passes).
+\end{itemize}
+
+For example, if you have 1000 training examples, and your batch size is 500, then it will take 2 iterations to complete 1 epoch.
+
+
+Cross validation is a technique to evaluate the efficacy of an AI/ML model's performance. It is common practice when performing a (supervised) machine learning experiment to split out part of the available data as a test dataset. 
+
+Cross-validation is an AI/ML methodology to validate a generated model against test data~\cite{dataflair-crossvalidation}. There are several ways to split the test data from the data set. There is a trade off between exhaustive testing and performance. There are several several methods of splitting a dataset for cross-validation~\cite{crossvalidation}:
+
+\begin{itemize}
+\item Holdout Method: Using a percentage of the dataset  as the test data
+\item K-Fold Method: Divides data into multiple (i.e., K) sections (i.e., Folds), then uses each as a test/train dataset.
+\item Leave-P-Out Method: Using every combination of a number of points (P) as test data
+\end{itemize}
+
+
+
+
+
+\subsubsection{Integration testing}
+
+Integration testing is the process of verifying the interfaces between system
+components and the AI/ML module. Regression testing focuses on executing the robot functional tests and see if the AI/ML module reacts favorably. Defects could be  poor timely response or  functional errors due to  issues such as process starvation, poor threading code.     It is assumed that an improper response from the AI/ML module would have been detected in functional testing, but issues such as timing, threading, preemption, starvation could magnify borderline issues.
+
+\subsubsection{Mitigating AI/ML Complete Autonomy}
+
+We assume AI/ML are mandated to operate with a degree of autonomy. The question arises can filters be applied pre-and-post processing to the AI/ML black box to double check inputs and outputs, and guard against  Clearly there are various operational environments which dictate the reaction to errant behavior. Graceful shutdown under controlled circumstances  may be acceptable versus graceful transition to safe mode under highly dangerous situations may be required.

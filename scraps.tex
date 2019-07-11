@@ -1,0 +1,114 @@
+
+
+
+The MNIST database was constructed from NIST's Special Database 3 and Special Database 1 which contain binary images of handwritten digits. NIST originally designated SD-3 as their training set and SD-1 as their test set. However, SD-3 is much cleaner and easier to recognize than SD-1. The reason for this can be found on the fact that SD-3 was collected among Census Bureau employees, while SD-1 was collected among high-school students. Drawing sensible conclusions from learning experiments requires that the result be independent of the choice of training set and test among the complete set of samples. Therefore it was necessary to build a new database by mixing NIST's datasets.
+
+This section provides a background on metadata, as it is important for disseminating the data worldwide. In fact, NIST has published an Internal Report 8112 on metadata: ``Attribute Metadata defines a schema for metadata that describe a subject’s attributes''~\cite{nistirmetadata}. 
+
+NISTIR 8112 proposes attribute schema metadata and attribute value metadata as part of an overall schema intended to convey information about adata's attribute(s). The schema contains two core components, attribute schema metadata and attribute value metadata which, along with their suggested elements, are described below:
+\begin{description}
+\item{\textbf{Attribute Schema Metadata (ASM)}} - Metadata for the attribute itself, not the specific attribute’s value. For example, this metadata may describe the format in which the attribute will be transmitted, such as that height will always be sent in inches regardless of what the actual value may be (e.g., height= 72).
+
+\item{\textbf{Attribute Value Metadata (AVM)}} - These elements focus on the asserted value for the attribute. Following the same example as above, the attribute value would be the actual height. A possible AVM for the height could be the name of the originating organization that provisioned the height, for example the Department of Motor Vehicles (DMV) in the subject’s home state. This schema in Table 2 provides a set of AVM and proposed values for those metadata fields.
+\end{description}
+
+\subsection{Project Open Data Metadata Schema v1.1}
+
+
+
+\subsubsection{GEM}
+ For the IEEE Robotics and Automation magazine, they have introduced  a new kind of article specifically designed to be reproducible and it is called an ``R-arcticle''. As part of this new kind of article, a description of research should be included that is recommended to be compliant with the good experimental methodology or GEM guidelines~\cite{bonsignorio2017new}. 
+ 
+ 
+ 
+
+The system is used both as a public platform on Datahub[3] and in various government data catalogues, such as the UK's data.gov.uk,[4] the Dutch National Data Register, the United States government's Data.gov[5] and the Australian government's "Gov 2.0".[6]
+
+
+
+\subsection{Perspective on Historical NIST AI Work}
+The National Institute of Standards and Technology was established by an act of Congress on March 3, 1901. The Institute's overall goal is to strengthen and advance the Nation's science and technology and facilitate their effective application for public benefit. To this end, the Institute conducts research to assure international competitiveness and leadership of U.S. industry, science and technology. NIST work involves development and transfer of measurements, standards and related science and technology, in support of continually improving U.S. productivity, product quality and reliability, innovation and underlying science and engineering. The Institute's technical work is performed by the National Measurement Laboratory, the National Engineering Laboratory, the National Computer Systems Laboratory, and the Institute for Materials Science and Engineering.
+
+Relevant to AI and Robotics, previous NIST work was done to develop a robust approach to real-time model-based visual tracking and servoing for rigid polyhedral objects moving with 3 degrees of freedom~\cite{schneiderman1994real}. Robust tracking and servoing was demonstrated in the presence of partial occlusion and cluttered backgrounds at tracking speeds of up to 1.2 rad/s (69 deg/s). This algorithm has also been used for vehicle following where a vehicle is driven autonomously by following the path of another vehicle. This work in turn led to an algorithm for object recognition that explicitly models and estimates the posterior probability function, $P(object|image)$~\cite{schneiderman1998probabilistic}, which in turn led to pioneering work in  a method for to detect human faces from frontal and profile views.
+
+VISION WORK
+
+ROBOTICS WORK SUMMARY
+
+\subsection{Related NIST AI/ML Work}
+NIST Special Database 1-9 contains NIST's extensive training set for handprinted document and character recognition~\cite{Wilson90,Grother}. The Modified National Institute of Standards and Technology dataset or MNIST s a database of handwritten digits and was modified so that the digits have been size-normalized and centered in a fixed-size image~\cite{LeCun}. MNIST is a training set of 60,000 examples, and a test set of 10,000 examples. It is a subset of a larger set available from NIST. The .
+
+The EMNIST dataset is a set of handwritten character digits derived from the NIST Special Database 19 and converted to a 28x28 pixel image format and dataset structure that directly matches the MNIST dataset~\cite{cohen2017emnist}.
+
+
+
+Supervised Machine Learning
+Past data is used to make predictions in supervised machine learning.
+
+Example of supervised machine learning is the spam filtering of emails. We all use Gmail, Yahoo, or Outlook. Machine learning algorithms are used for deciding which email is spam and which is not.
+
+Based on the previous data like received emails, data that we use etc., the system makes predictions about an email as for whether it is a spam or not. These predictions may not be perfect, but they are accurate most of the times.
+
+Classification and Regression are the ML algorithms that come under Supervised ML.
+
+#2) Unsupervised Machine Learning
+Unsupervised machine learning finds hidden patterns.
+
+Earlier we saw the example of Facebook (Example 2). This is an example of unsupervised machine learning. Clustering and Association algorithms come under this type of machine learning.
+
+#3) Reinforcement Machine Learning
+Reinforcement machine learning is used for improving or increasing efficiency.
+
+Let's explore some examples of the above-mentioned algorithms.
+
+Classification: Spam filtering of emails.
+Regression: These algorithms also learn from the previous data like classification algorithms but it gives us the value as an output. Example: Weather forecast – as how much rain will be there?
+Clustering: These algorithms use data and give output in the form of clusters of data. Example: Deciding the prices of house/land in a particular area (geographical location).
+Association: When you buy products from shopping sites, the system recommends another set of products. Association algorithms are used for this recommendation
+This is all about machine learning. Now let's take a look at the top machine learning software.
+
+
+Neural Networks is one of the most common machine learning algorithms and with good reason. 
+
+Neural networks is one of the most common machine learning algorithms and is particularly good when applied to problems where there is a large amount of input data.  Through an input layer, one or more hidden layers, and an output layer, a neural network works by connecting up a series of neurons with weights assigned to each connection. As each connection is activated, a calculation is performed on the connection before passing through an activation function at each level of the hidden layers. 
+
+
+Commonly, these activation functions are either the RELU, sigmoid or tanh. Their purpose is usually to determine whether the next layer should be activated.
+Overall, much of AI is navigating a world with a plethora of choices and selecting the correct one. If the AI system is continually updating based on its experience it is known as learning.
+
+
+
+
+
+
+IETF outlines the strategy for developing new performance metrics~\cite{clarkbcp2011}.
+
+
+
+
+\subsection{Steps for defining AI/ML }
+
+
+\begin{figure}[!h]
+\centering
+%\framebox{
+\includegraphics*[]{./Figure/5StepLife-Cycle.jpg}
+%}
+\caption{5 Step Life-Cycle for Neural Network - source~\cite{5steps}}
+\label{fg:aiml_flowchart} 
+\end{figure}
+
+
+\item \textbf{Secure}  metric that covers the idea of engineering software so that it continues to function correctly under malicious attack~\cite{1281254}. Security testing must encompass two strategies: testing security functionality with standard functional testing techniques, and risk-based security testing based on attack patterns and threat models. 
+
+The Review process has an approval routing process:
+\begin{itemize}
+\item 
+Group Leader or designee (in organizations that don't have Group Leaders)
+\item Technical reviewers (at least two) – one within your division and one outside your division (simultaneous)
+\item Division Chief
+\item Deputy OU Director (in some cases)
+\item OU Director (in some cases)
+\item ERB Sponsor
+\item ERB Chair.
+\end{itemize}

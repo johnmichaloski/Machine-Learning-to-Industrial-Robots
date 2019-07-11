@@ -1,0 +1,106 @@
+\section{Background AI}
+Artificial intelligence is the study of ideas that enable computers to be intelligent~\cite{winston1992artificial}.  Since the formal definition of intelligence is difficult but the concept is intuitive, emphasizing the role of intelligent computing suffices to describe the overreaching goal of AI. AI itself has many applications. Figure~\ref{fg:AICapabilities} sketches some of the major capabilities under the umbrella of artificial intelligence.
+
+AI is used for reasoning about problems, such as manipulating blocks in a blocks world that at a more practical level  corresponds to robot grasping and part assembly. AI is also used for exploring alternative routes to a problem solution using searching and backtracking. Searching techniques can be exhaustive, evolutionary, smart, and/or pruned. Such functionality is useful for planning and in games.  Problem solving is another key AI area where a generate-and-test or a rule-based-systems can be applied to computer architecture layout, health diagnoses, and game playing  Such system are known as ``expert systems'' that uses rules to make deductions or choices. Knowledge representation is another domain under the purview of AI often implemented as semantic nets to model natural language as well as human understanding.
+
+Learning is a branch of artificial intelligence based on the idea that systems exhibit adaptive behavior and can learn from data, identify patterns and make decisions. Machine learning relies on a method of data analysis that facilitates model building.
+
+Artificial intelligence as applied to robotics  includes sensing, navigation, path planning, and control as these areas require programming and by definition are artificial, while at the same time are intrinsically linked to a smarter more intelligent robot.
+
+
+Robots typically include perception so that robot control for reaching and moving objects in a complex environment with obstacles and vision occlusions is a leading AI application~\cite{staley2018drl}.
+
+
+\begin{figure}[!h]
+\centering
+%\framebox{
+\includegraphics*[width=0.9\columnwidth]{./Figure/AICapabilities.jpg}
+%}
+\caption{General Capabilities of AI}
+\label{fg:AICapabilities} 
+\end{figure}
+
+
+\subsection{Machine learning}
+\label{chapter2}
+\textit{}
+%---- the scope of this chapter}}
+Webster dictionary defines learning as the ability to gain knowledge or understanding of or skill in by study, instruction, or experience; or as the modification of a behavioral tendency by experience (such as exposure to conditioning)~\cite{learningdef}. Of interest in this definition, is the ability to gain an understanding through experience. For our purposes, we refine the term experience to be data training. This leads to the following machine learning definition. 
+
+Artificial Intelligence is a more general concept of ``smarter'' machines while machine learning is an AI application that ``smart'' machines continually adapt to data themselves. The most frequently cited definition of learning comes from Simon~\cite{simon1983should}: ``Learning denotes changes in the system that is adaptive in the sense that they enable the system to do the same task or tasks drawn from the same population more effectively the next time''.  But there can be a more static viewpoint of machine learning. One can use machine learning and big data techniques to train neural net to be intelligent and make  intelligent predictions, without continuously adapting to the environment and improving.  However, this does assume that the trained model is sufficiently intelligent for the  application.
+
+Variations on machine learning terminology and implementation exist. Some of the terminology and implementations overlap. The following sketches some of the most salient learning concepts.
+
+\begin{description}
+
+%----  Deep learning
+\item{\textbf{Deep learning}}
+Deep learning is the science of training large artificial neural networks~\cite{pierson2017deep}. Deep neural networks (DNNs) form compact
+representations from raw, high-dimensional, multimodal sensor data commonly
+found in robotic systems~\cite{bohmer2015autonomous}.
+
+
+%----------------------------------------------------------------------------------------
+
+
+\item{\textbf{Supervised Learning}}
+Type of learning in which the data outcome is known, and this data outcome is explicitly used during training that is the model is trained under the supervision of a teacher. For example, if we want to build a classification model for handwritten digits, the input will be the set of images (training data) and the target variable will be the labels assigned to these images, that is their digit value outcomes from 0-9 associated with each image.
+
+\item{\textbf{Unsupervised Learning}}
+Type of learning in which no supervisor is involved.   The goal is to directly infer the properties of a dataset without the help of a supervisor providing correct answers for each input.
+
+\item{\textbf{Imitation learning}}
+Type of learning in which the goal is to train by replicating the observed behavior and is typically achieved using supervised learning techniques.
+
+%----  Robot Reinforcement learning
+\item{\textbf{Reinforcement learning}}
+Reinforcement learning is a type of learning algorithm in which the machine takes decisions on what actions to take, given a certain situation/environment, so as to maximize a reward. In reinforcement learning, learner is not told which actions to take, as in most forms of machine learning, but instead, must discover which actions yield the most reward by trying them. In the most interesting and challenging cases, actions may affect not only the immediate reward but also subsequent future  rewards.\\
+\\
+
+\end{description}
+
+
+%----------------------------------------------------------------------------------------
+\section{Robotic AI Applications}
+The goal of AI is to develop worthwhile robotic applications that traditional programming approaches have had difficulty. Typically, a robot software system is divided into planning, sensing and control. Robot applications typically mimic humans, such as pick and place requiring dexterous grasping, planning, visual sensing and tracking, obstacle avoidance.   This section will review some of the current robotic AI/ML research.
+
+%----  Robot Reinforcement learning
+\subsection{Reinforcement Learning }
+Reinforcement Learning (RL) is a machine learning framework for optimizing the behaviour of an agent interacting with an unknown environment~\cite{sutton1998introduction}.
+Reinforcement Learning enables a robot to autonomously discover an optimal behavior through trial-and-error interactions
+with its environment~\cite{kormushev2013reinforcement}. Instead of explicitly detailing the solution to a problem, in reinforcement learning the designer of a control task provides feedback in terms of an objective function that measures the one-step performance of the robot.
+
+Reinforcement learning enables a robot to autonomously discover an optimal behavior through trial-and-error interactions
+with its environment\cite{kormushev2013reinforcement}. Instead of explicitly detailing the solution to a problem, in reinforcement learning the designer of a control task provides feedback in terms of an objective function that measures the one-step performance of the robot.
+
+
+
+Larouche and F\'{e}raud~\cite{laroche2017reinforcement} defines reinforcement Learning (RL) to be considered learning through trial and error to control an agent behavior in a stochastic environment: at each time step $t \in N$, the agent performs an action $a(t) \in  A $, and then perceives from its environment a signal $o(t) \in \omega$ called observation, and receives a reward $t(t) \in R$,  bounded between $R_{min}$ and $R_{max}$. Laroche and F\'{e}raud then proposes to share their trajectories expressed in a universal format. A high level definition of the RL algorithms allows to share trajectories between algorithms: a trajectory as a sequence of observations, actions, and rewards can be interpreted by any algorithm in its own decision process and state representation. 
+
+Kober~\cite{kober2013reinforcement} uses training a robot to play table tennis to explain RL concepts. Robot observations of ball position and velocity as well as the internal joint dynamics constitute the \textit{state} $s$ of the system. The \textit{actions} $a$ available to the robot could be torque motor commands. A function $\pi$ generates the actions based on the state and would be called a \textit{policy}. This leads to the definition of a reinforcement problem is to find a policy that optimizes the long-term sum of \textit{reward} $R(s,a)$.
+
+
+
+%----  Robot Grasping learning
+\subsection{Grasping}
+The broader goal of robot grasping is to develop highly reliable robot grasping across a wide variety of rigid objects such as tools, household items, packaged goods, and industrial parts.
+
+The Dexterity Network (Dex-Net) is a research project at the University of California Berkeley Automation Lab whose goal is to generate datasets of synthetic point clouds, robot parallel-jaw grasps and metrics of grasp robustness based on physics for thousands of 3D object models to train machine learning-based methods to plan robot grasps~\cite{mahler2017learning,dexnet}. Several generation of Dex-Net have evolved adding various grasping skills. Of distinction, Dex-Net 2.0 is designed to generated training datasets to learn grasping models that predict the probability of success of candidate parallel-jaw grasps on objects from point clouds. The goal was for a robot to quickly plan grasps for a wide variety of objects. 
+
+\subsection{Robot Vision and Sensory Processing}
+Machine learning with deep convolutional neural networks has become a primary method when it comes to image classification problems. Such  sensory AI technology need not be limited to image sensor processing, but could be applied to other sensor applications such as tactile sensing or joint encoders~\cite{bohmer2015autonomous}.
+
+
+
+\subsection{Highly Redundant Robot Kinematic}
+Highly redundant robots are prime candidates for machine learning to solve the inverse kinematics. Especially for redundant robots,  inverse kinematics algorithms need to address how to determine a particular solution in face of multiple solutions. 
+
+In \cite{973374},   a statistical learning algorithm, ``Locally Weighted Projection Regression'', is shown to exhibit efficient learning of inverse kinematic mappings in an incremental fashion even when input spaces are high dimensional.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Keras overview for hands on 
+%\input{handson/keras.tex}
+

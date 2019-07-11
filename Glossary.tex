@@ -1,0 +1,45 @@
+
+
+\section{Glossary}
+
+The following terms are bandied about in Neural nets and Machine Learning. Although the terminology is not difficult, understanding the terminology aids in understanding the technology. The glossaru is a work-in-progress that relies on existing online glossaries, tutorials, publications and Wikipedia~\cite{stanfordGlossary,provost1998glossary,ma2014machine,carroll2013grossman,minka2005statistical}.
+
+
+\begin{description}
+\item{\textbf{Activation Function}} Activation functions are mathematical equations that determine the output of a neural network.The function is attached to each neuron in the network, and determines whether it should be activated (``fired'') or not, 
+based on whether each neuron's input is relevant for the model's prediction. 
+Activation functions also help normalize the output of each neuron to a range between $1$ and $0$ or between $-1$ and $1$.
+
+\item{\textbf{Backpropagation}}   is short for ``the backward propagation of errors'' since an error is computed at the output and distributed backwards throughout the networks layers.
+\item{\textbf{Bias}} Allow models to represent data input patterns that do not pass through the origin.
+\item{\textbf{Block}} instead of neurons has components that make it smarter than classical neuron and a memory for recent sequences consisting of gates that manage the block's state and output.   Block has three types o gates : Forget, input and output.  Each unit is like a mini-state machine where the gates of the units have weights that are learned during the training procedure.
+Gradient descent is an optimization algorithm used to minimize some function by iteratively moving in the direction of steepest descent as defined by the negative of the gradient.
+
+
+
+\item{\textbf{Classification}} Predicting a categorical output, such as yes/no, type, etc. A mapping from unlabeled instances to (discrete) classes.
+
+\item{\textbf{Data mining}} is the process of using historical databases to improve subsequent decision making. 
+
+\item{\textbf{Epoch}}  An epoch describes the number of times the neural net algorithm sees the entire data set.
+\item{\textbf{Long Short Term Memory}} or LTSM is a variant of the RNN architecture. It was difficult to train models using traditional RNN architectures. Recent advancements demonstrate state of the art results using LSTM and BRNN(Bidirectional RNN). The LSTM architecture was able to take care of the vanishing gradient problem in the traditional RNN.
+
+\item{\textbf{Machine Learning}} computer systems that automatically improve through experience~\cite{Jordan255}.
+
+\item{\textbf{Recurrent Neural Network}} or RNN is a type of neural network designed to handle sequence dependence (e.g., timed ordering of data). The decision a recurrent network reached at time step t-1 affects the decision it will reach one moment later at time step t.  RNN is a special case of neural network similar to convolutional neural networks, the difference being that RNN’s can retain its state of information.
+\item{\textbf{Softmax}}
+
+\item{\textbf{Supervised Learning}} Training a model using a labeled dataset.
+\item{\textbf{Test Set}} set of observations at the end of training to evaluate the efficacy of the learning model.
+
+\item{\textbf{Training Set}} a set of observations used to generate machine learning models.
+\item{\textbf{Unsupervised Learning}} Training a model to find patterns in an unlabeled dataset (e.g., clustering).
+
+
+
+\item{\textbf{Unsupervised learning}} 
+Learning techniques that group instances without a pre-specified dependent attribute. Clustering algorithms are usually unsupervised.
+
+
+
+\end{description}

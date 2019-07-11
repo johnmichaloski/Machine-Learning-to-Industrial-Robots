@@ -1,0 +1,41 @@
+%----------------------------------------------------------------------------------------
+%	Python Notes
+%----------------------------------------------------------------------------------------
+
+% Good phython web resources
+% https://data-flair.training/blogs/python-ml-data-preprocessing/
+% https://scikit-learn.org/stable/modules/cross_validation.html
+%  https://machinelearningmastery.com/5-step-life-cycle-neural-network-models-keras/
+
+\subsection{Data Preprocessing in Python Machine scikit Learning}
+
+Before we can feed such a dataset to an ML algorithm, the dataset must be preprocessed to fit the neural network.This is done by applying some Python transformations to the datasets. In this manner, a dataset is converted from raw data into a ML compatible data set. There are several data preprocessing transformation utilities.
+\begin{description}
+
+\item{ \textbf{MinMaxScaler}}
+The the MinMaxScaler class from scikit-learn normalizes data by scaling the dataset into the range 0 to 1. MinMaxScaler proves useful with neural networks, optimization algorithms and for algorithms that require distance measures like k-nearest neighbors and weight inputs like regression.
+
+\item{ \textbf{StandardScaler}}
+The StandardScaler class transforms a Gaussian distribution with non-normal means and standard deviations into a standard Gaussian distribution with a mean of 0 and a standard deviation of 1. 
+
+\item{ \textbf{StandardScaler}}
+The StandardScaler class transforms a Gaussian distribution with non-normal means and standard deviations into a standard Gaussian distribution with a mean of 0 and a standard deviation of 1. 
+
+\item{ \textbf{Normalizer}}
+The Normalizer class rescales each data observation to a length of 1 (a unit norm).
+
+\item{ \textbf{Binarizer}}
+The Binarizer class transforms  data by marking the values above a threshold to 1 and those equal to or below the threshold, 0. 
+
+\item{ \textbf{Scale}}
+The Scale class  centers the data around zero, by subtracting  the mean from all data points.
+
+\item{ \textbf{One Hot Encoding}}
+
+When dealing with few and scattered numerical values, we may not need to store these. Then, we can perform One Hot Encoding. For k distinct values, we can transform the feature into a k-dimensional vector with one value of 1 and 0 as the rest values.
+
+\item{ \textbf{Label Encoding}}
+Some labels can be words or numbers. Usually, training data is labelled with words to make it readable. Label encoding converts word labels into numbers so that ML algorithms can work on them. 
+
+\end{description}
+
